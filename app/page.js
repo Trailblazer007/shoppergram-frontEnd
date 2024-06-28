@@ -1,12 +1,13 @@
 import Image from "next/image";
+import Link from "next/link";
 import Nav from "./_components/Nav";
 
 export default function Home() {
   return (
-    <div>
-      <div className="flex pl-16 pt-16">
+    <div className="">
+      <div className="h-screen justify-between flex">
         {/* left side form */}
-        <div className="w-2/6">
+        <div className="w-2/6 mx-auto self-center">
           <div className="mb-4">
             <Image
               height={56}
@@ -19,45 +20,47 @@ export default function Home() {
           <h2 className="font-bold text-lg mb-4">Create Account</h2>
           <form>
             <div>
-              <div className="pb-5">
-                <p className="capitalize">name</p>
+              <div className="pb-6">
+                <p className="mb-1 capitalize">name</p>
                 <input
-                  className="w-full p-2 outline-none border rounded-sm bg-slate-100"
+                  className="w-full p-2 outline-none border rounded-sm bg-[#7DC3DE1A]"
                   type="text"
                 />
               </div>
 
-              <div className="pb-4">
-                <p className="capitalize">email</p>
+              <div className="pb-6">
+                <p className="mb-1 capitalize">email</p>
                 <input
-                  className="w-full p-2 outline-none border rounded-sm bg-slate-100"
+                  className="w-full p-2 outline-none border rounded-sm bg-[#7DC3DE1A]"
                   type="text"
                 />
               </div>
 
-              <div className="pb-4">
-                <p className="capitalize">password</p>
+              <div className="pb-6">
+                <p className="mb-1 capitalize">password</p>
                 <input
-                  className="w-full p-2 outline-none border rounded-sm bg-slate-100"
+                  className="w-full p-2 outline-none border rounded-sm bg-[#7DC3DE1A]"
                   type="text"
                 />
               </div>
 
-              <div className="pb-4">
-                <p className="capitalize">confirm password</p>
+              <div className="pb-6">
+                <p className="mb-1 capitalize">confirm password</p>
                 <input
-                  className="w-full p-2 outline-none border rounded-sm bg-slate-100"
+                  className="w-full p-2 outline-none border rounded-sm bg-[#7DC3DE1A]"
                   type="text"
                 />
               </div>
 
               <p className="text-sm">
                 Already have an account?
-                <span className="text-blue-600"> Log in</span>
+                <Link href={"#"} className="ml-1 text-[#006C96]">
+                  Log in
+                </Link>
               </p>
 
-              <div className="mx-7 my-5 flex justify-center">
-                <button className="capitalize font-bold bg-blue-500 rounded-md p-3 w-full">
+              <div className="mx-10 my-5 flex justify-center">
+                <button className="capitalize font-bold bg-[#0096D0] rounded-md p-3 w-full">
                   create acccount
                 </button>
               </div>
@@ -67,44 +70,45 @@ export default function Home() {
           <p className="text-center">Or sign up using</p>
 
           <div className="flex justify-center gap-2">
-            <div>
+            <Link href={"#"}>
               <Image
                 height={42}
                 width={42}
                 src="/icons/apple.png"
                 alt="twitter link"
               />
-            </div>
+            </Link>
 
-            <div>
+            <Link href={"#"}>
               <Image
                 height={42}
                 width={42}
                 src="/icons/google.png"
                 alt="google link"
               />
-            </div>
+            </Link>
 
-            <div>
+            <Link href={"#"}>
               <Image
                 height={42}
                 width={42}
                 src="/icons/fb.png"
                 alt="facebook link"
               />
-            </div>
+            </Link>
           </div>
         </div>
 
         {/*right side image  */}
-        {/* <div className="bg-blue-300">
+        <div className="flex rounded-l-3xl realtive h-full bg-[#7DC3DE5E]">
           <Image
-            height={225}
-            width={225}
-            src="/images/woman-image.jpeg"
+            className="self-end"
+            height={473}
+            width={551}
+            src="/images/woman-with-box.png"
             alt="image of person"
           />
-        </div> */}
+        </div>
       </div>
     </div>
   );
